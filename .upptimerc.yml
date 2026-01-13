@@ -50,7 +50,7 @@ sites:
 
 status-website:
   baseUrl: /CNB-Status-Page
-  themeUrl: https://raw.githubusercontent.com/cnbwebmaster/CNB-Status-Page/master/assets/cnb-theme.css
+  themeUrl: https://github.com/cnbwebmaster/CNB-Status-Page/blob/master/assets/cnb-theme.css
   logoUrl: https://github.com/cnbwebmaster/CNB-Status-Page/blob/master/assets/images.png
   name: Career Now Brands Status
   introTitle: "System Status"
