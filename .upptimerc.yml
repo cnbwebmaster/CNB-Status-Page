@@ -4,37 +4,54 @@ repo: CNB-Status-Page
 sites:
   - name: Career Now Brands Website
     url: https://careernowbrands.com
+    maxResponseTime: 10000
 
-  - name: Google (External Dependency)
+  # Core tools (monitor the product you use, not just their public status page)
+  - name: Monday.com
+    url: https://monday.com
+    maxResponseTime: 10000
+
+  - name: Braze
+    url: https://www.braze.com
+    maxResponseTime: 10000
+
+  - name: Jira (Atlassian)
+    url: https://jira.atlassian.com
+    maxResponseTime: 10000
+
+  - name: Confluence (Atlassian)
+    url: https://confluence.atlassian.com
+    maxResponseTime: 10000
+
+  - name: Tableau Cloud (SSO)
+    url: https://sso.online.tableau.com/
+    maxResponseTime: 10000
+
+  - name: HubSpot
+    url: https://app.hubspot.com
+    maxResponseTime: 10000
+
+  - name: Slack
+    url: https://slack.com
+    maxResponseTime: 10000
+
+  - name: Cloudflare
+    url: https://dash.cloudflare.com
+    maxResponseTime: 10000
+
+  # Optional: keep one “external internet sanity check”
+  - name: Google (Connectivity Check)
     url: https://www.google.com
-
-  - name: Hacker News (Test Monitor)
-    url: https://news.ycombinator.com
-
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-
-  - name: IPv6 Test
-    url: forwardemail.net
-    port: 80
-    check: tcp-ping
-    ipv6: true
+    maxResponseTime: 10000
 
 status-website:
-  # Using GitHub Pages without a custom domain
   baseUrl: /CNB-Status-Page
-
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Career Now Brands Status
   introTitle: "System Status"
   introMessage: "Live uptime and incident reporting for Career Now Brands internal and customer-facing systems."
-
   navbar:
     - title: Status
       href: /
     - title: GitHub Repository
       href: https://github.com/$OWNER/$REPO
-
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
