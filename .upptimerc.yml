@@ -34,7 +34,11 @@ sites:
   - name: Slack
     url: https://slack.com
     maxResponseTime: 10000
-
+    
+  - name: Five9
+    url: https://login.five9.com/
+    maxResponseTime: 10000
+    
   - name: Cloudflare
     url: https://dash.cloudflare.com
     maxResponseTime: 10000
@@ -46,7 +50,7 @@ sites:
 
 status-website:
   baseUrl: /CNB-Status-Page
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+  logoUrl: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl804kiYXK4xTUyF1qqbq9xopJSbAI5UPz_w&s
   name: Career Now Brands Status
   introTitle: "System Status"
   introMessage: "Live uptime and incident reporting for Career Now Brands internal and customer-facing systems."
