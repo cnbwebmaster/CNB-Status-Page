@@ -1,0 +1,27 @@
+/* =========================================
+   Career Now Brands – Custom Theme
+   ========================================= */
+
+:root {
+  --body-background-color: linear-gradient(
+    180deg,
+    #8b1120 0%,
+    #3a070c 45%,
+    #000000 100%
+  );
+
+  --card-background-color: rgba(0, 0, 0, 0.55);
+  --card-border-color: rgba(255, 255, 255, 0.15);
+
+  --nav-background-color: linear-gradient(
+    90deg,
+    #8b1120,
+    #000000
+  );
+
+  --nav-border-bottom-color: #ff4d4d;
+
+  --up-border-left-color: #2ecc71;
+  --down-border-left-color: #ff4d4d;
+  --degraded-border-left-color: #ffa500;
+}
