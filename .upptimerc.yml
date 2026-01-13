@@ -50,7 +50,7 @@ sites:
 
 status-website:
   baseUrl: /CNB-Status-Page
-  logoUrl: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl804kiYXK4xTUyF1qqbq9xopJSbAI5UPz_w&s
+  logoUrl: https://github.com/cnbwebmaster/CNB-Status-Page/blob/master/assets/images.png
   name: Career Now Brands Status
   introTitle: "System Status"
   introMessage: "Live uptime and incident reporting for Career Now Brands internal and customer-facing systems."
