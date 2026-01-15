@@ -1,4 +1,3 @@
-```css
 body {
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
@@ -233,32 +232,63 @@ article {
 }
 
 /* =========================================
-   TV / Dashboard Layout (FULL-WIDTH + SPACING)
+   TV / Dashboard Layout (2-column flow)
+   This will put MORE cards on-screen without
+   messing up the page structure.
    ========================================= */
 
-/* Use the whole screen, but keep it readable */
+/* Use more screen width */
 .container {
   max-width: 1900px !important;
-  width: calc(100vw - 80px) !important;  /* fills screen with margins */
+  width: calc(100vw - 80px) !important;
   margin: 0 auto !important;
   padding: 0 40px !important;
   box-sizing: border-box;
+
+  /* Multi-column flow */
+  column-count: 2;
+  column-gap: 28px;
 }
 
-/* Make cards breathe + consistent spacing */
+/* Readability */
+body {
+  font-size: 18px;
+}
+
+/* Keep main headings/nav from splitting into columns */
+nav,
+h1,
+h2,
+h3,
+p,
+dl {
+  column-span: all;
+}
+
+/* Cards: spacing + prevent breaking between columns */
 article {
-  margin: 0 0 18px 0 !important;      /* space between cards */
-  padding: 18px 22px !important;      /* bigger internal padding */
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+
+  margin: 0 0 18px 0 !important;
+  padding: 18px 22px !important;
   border-radius: 10px !important;
 }
 
-/* Keep incident banner from being absurdly tall */
+/* Keep incident banner full width */
 article.down,
 article.down-active {
+  column-span: all;
   padding: 16px 22px !important;
 }
 
-/* Give headings room on TV */
+/* Tighten graphs so cards aren't gigantic */
+article .graph {
+  max-height: 90px;
+  overflow: hidden;
+}
+
+/* Bigger title for TV */
 h1 {
   font-size: 2.6em !important;
   margin-top: 0.25em;
@@ -268,8 +298,9 @@ h2 {
   margin-top: 1.25em;
 }
 
-/* Optional: tighten the graph area so the cards aren’t gigantic */
-article .graph {
-  max-height: 90px;
-  overflow: hidden;
+/* Go 3 columns on very wide screens (big TVs / 4K) */
+@media (min-width: 1700px) {
+  .container {
+    column-count: 3;
+  }
 }
