@@ -236,9 +236,10 @@ article .graph {
 /* Optional: subtle glass effect on cards */
 article {
   backdrop-filter: blur(2px);
-  /* =========================================
+}
+
+/* =========================================
    TV / Dashboard Layout (Multi-column)
-   Paste at the VERY BOTTOM of global.css
    ========================================= */
 
 /* Use more screen width */
@@ -256,20 +257,27 @@ h1 {
   font-size: 2.25em;
 }
 
-/* Turn the status card list into a responsive grid.
-   This targets the container that holds multiple <article> cards. */
-section {
+/* Upptime card list: target the parent of multiple articles.
+   This selector covers the typical Upptime structure. */
+section,
+.container > section,
+.container > div {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
-/* Keep headings and non-card content from getting gridded weirdly */
+/* Ensure headings and non-card content span full width */
 section > h2,
 section > h3,
 section > dl,
 section > p,
-section > .data {
+section > .data,
+.container > div > h2,
+.container > div > h3,
+.container > div > dl,
+.container > div > p,
+.container > div > .data {
   grid-column: 1 / -1;
 }
 
@@ -282,21 +290,24 @@ article {
 
 /* On wider screens: 3 columns */
 @media (min-width: 1200px) {
-  section {
+  section,
+  .container > section,
+  .container > div {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 /* On very wide screens (big TVs): 4 columns */
 @media (min-width: 1700px) {
-  section {
+  section,
+  .container > section,
+  .container > div {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Make the incident banner span full width */
+/* Make incident banner span full width */
 article.down-active,
 article.down {
   grid-column: 1 / -1;
-
 }
