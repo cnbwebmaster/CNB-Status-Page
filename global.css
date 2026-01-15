@@ -236,4 +236,67 @@ article .graph {
 /* Optional: subtle glass effect on cards */
 article {
   backdrop-filter: blur(2px);
+  /* =========================================
+   TV / Dashboard Layout (Multi-column)
+   Paste at the VERY BOTTOM of global.css
+   ========================================= */
+
+/* Use more screen width */
+.container {
+  max-width: 1600px !important;   /* bump from 800 */
+  padding: 0 1.25rem !important;
+}
+
+/* Slightly tighter typography for TV density */
+body {
+  font-size: 18px;               /* adjust up/down for TV readability */
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+/* Turn the status card list into a responsive grid.
+   This targets the container that holds multiple <article> cards. */
+section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+/* Keep headings and non-card content from getting gridded weirdly */
+section > h2,
+section > h3,
+section > dl,
+section > p,
+section > .data {
+  grid-column: 1 / -1;
+}
+
+/* Cards: make them a bit more compact */
+article {
+  margin: 0 !important;
+  padding: 0.85rem 1rem !important;
+  border-radius: 0.35rem;
+}
+
+/* On wider screens: 3 columns */
+@media (min-width: 1200px) {
+  section {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* On very wide screens (big TVs): 4 columns */
+@media (min-width: 1700px) {
+  section {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Make the incident banner span full width */
+article.down-active,
+article.down {
+  grid-column: 1 / -1;
+
 }
