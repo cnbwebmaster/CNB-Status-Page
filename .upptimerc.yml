@@ -50,8 +50,8 @@ sites:
 
 status-website:
   baseUrl: /CNB-Status-Page
-  themeUrl: https://github.com/cnbwebmaster/CNB-Status-Page/blob/master/assets/cnb-theme.css
-  logoUrl: https://github.com/cnbwebmaster/CNB-Status-Page/blob/master/assets/images.png
+  themeUrl: https://raw.githubusercontent.com/cnbwebmaster/CNB-Status-Page/master/assets/cnb-theme.css
+  logoUrl: https://raw.githubusercontent.com/cnbwebmaster/CNB-Status-Page/master/assets/images.png
   name: Career Now Brands Status
   introTitle: "System Status"
   introMessage: "Live uptime and incident reporting for Career Now Brands internal and customer-facing systems."
@@ -60,3 +60,4 @@ status-website:
       href: /
     - title: GitHub Repository
       href: https://github.com/$OWNER/$REPO
+
