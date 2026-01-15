@@ -1,6 +1,8 @@
 /* =========================================
    Career Now Brands – Custom Theme
    ========================================= */
+/* LOAD TEST - if this doesn't show, themeUrl isn't being applied */
+body { background: #ff00ff !important; }
 
 :root {
   --body-background-color: linear-gradient(
