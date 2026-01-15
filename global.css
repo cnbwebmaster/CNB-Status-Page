@@ -201,3 +201,39 @@ article .graph {
   opacity: var(--graph-opacity);
   filter: var(--graph-filter);
 }
+
+/* =========================================
+   CNB Custom Overrides (RED -> BLACK THEME)
+   Put this at the VERY BOTTOM of global.css
+   ========================================= */
+
+:root {
+  --body-background-color: linear-gradient(
+    180deg,
+    #8b1120 0%,
+    #3a070c 45%,
+    #000000 100%
+  );
+
+  --body-text-color: #ffffff;
+
+  --card-background-color: rgba(0, 0, 0, 0.55);
+  --card-border-color: rgba(255, 255, 255, 0.15);
+
+  --nav-background-color: linear-gradient(90deg, #8b1120, #000000);
+  --nav-border-bottom-color: #ff4d4d;
+  --nav-current-border-bottom-color: #ff4d4d;
+
+  --up-border-left-color: #2ecc71;
+  --down-border-left-color: #ff4d4d;
+  --degraded-border-left-color: #ffa500;
+
+  --tag-up-background-color: #2ecc71;
+  --tag-down-background-color: #ff4d4d;
+  --tag-degraded-background-color: #ffa500;
+}
+
+/* Optional: subtle glass effect on cards */
+article {
+  backdrop-filter: blur(2px);
+}
