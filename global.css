@@ -237,3 +237,73 @@ article .graph {
 article {
   backdrop-filter: blur(2px);
 }
+
+/* ======================================================
+   TV GRID: status cards side-by-side (2–4 columns)
+   Paste at VERY BOTTOM of global.css
+   ====================================================== */
+
+/* Use more screen width */
+.container {
+  max-width: 1900px !important;
+  width: calc(100vw - 80px) !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+  box-sizing: border-box;
+}
+
+/* Remove old vertical stacking margin so grid gap controls spacing */
+article + article {
+  margin-top: 0 !important;
+}
+
+/* Modern browsers: auto-target the wrapper that directly contains cards */
+@supports selector(div:has(> article)) {
+  /* Turn the card wrapper into a grid (ONLY the element that has direct article children) */
+  .container :is(section, div, main):has(> article) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(360px, 1fr)) !important;
+    gap: 18px !important;
+    align-items: start !important;
+  }
+
+  /* Keep headings/text inside that wrapper full-width */
+  .container :is(section, div, main):has(> article) > h1,
+  .container :is(section, div, main):has(> article) > h2,
+  .container :is(section, div, main):has(> article) > h3,
+  .container :is(section, div, main):has(> article) > p,
+  .container :is(section, div, main):has(> article) > dl {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Cards: let the grid handle spacing */
+  article {
+    margin: 0 !important;
+  }
+
+  /* Incident banner spans all columns */
+  article.down-active,
+  article.down {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* 3 columns on wide screens */
+  @media (min-width: 1400px) {
+    .container :is(section, div, main):has(> article) {
+      grid-template-columns: repeat(3, minmax(360px, 1fr)) !important;
+    }
+  }
+
+  /* 4 columns on very wide screens / 4K TVs */
+  @media (min-width: 1900px) {
+    .container :is(section, div, main):has(> article) {
+      grid-template-columns: repeat(4, minmax(340px, 1fr)) !important;
+    }
+  }
+}
+
+/* Fallback (older browsers without :has()):
+   Still improves width, but won’t force grid without a known wrapper class. */
+@supports not selector(div:has(> article)) {
+  /* If your browser is old, reply with what browser the TV uses and I’ll give you a wrapper-specific selector. */
+}
