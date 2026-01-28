@@ -41,207 +41,23 @@ status-website:
   baseUrl: /CNB-Status-Page
   logoUrl: /CNB-Status-Page/assets/images.png
   name: Career Now Brands Status
-  introTitle: "System Status"
-  introMessage: "Live uptime and incident reporting for Career Now Brands internal and customer-facing systems."
-  navbar:
-    - title: Status
-      href: /
   customCSS: |
-    /* ===============================
-       Base layout & typography
-       =============================== */
-    body {
-      margin: 0;
-      font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
-        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      line-height: 1.5;
-      padding-bottom: 2.5rem;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 0.5em 0;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-    h1 { font-size: 2em; }
-    a { color: inherit; }
-    @media (min-width: 400px) {
-      body { font-size: 16px; }
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      box-sizing: border-box;
-    }
-    /* ===============================
-       Articles / cards
-       =============================== */
-    article {
-      padding: 1rem 1.25rem;
-      position: relative;
-      border-radius: 0.2rem;
-      border: 1px solid;
-    }
-    article.link a::after {
-      content: "";
-      position: absolute;
-      left: 0; right: 0; top: 0; bottom: 0;
-    }
-    article + article { margin-top: 0.5rem; }
-    article + h3 { margin-top: 1rem; }
-    h3 { opacity: 0.75; }
-    h4 { font-weight: bold; }
-    article.down, article.degraded, article.up {
-      border-left: 0.2rem solid;
-    }
-    /* ===============================
-       Flex helpers
-       =============================== */
-    .f {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    section + h2 { margin-top: 2rem; }
-    /* ===============================
-       Tags
-       =============================== */
-    .tag {
-      display: inline-block;
-      padding: 0.33rem 0.5rem;
-      border-radius: 0.2rem;
-      font-size: 70%;
-      vertical-align: middle;
-      margin-top: -0.2rem;
-      margin-left: 0.5rem;
-    }
-    /* ===============================
-       Definition lists
-       =============================== */
-    dl { margin-bottom: 1.5rem; }
-    dl dt { font-weight: bold; }
-    dl dd { margin: 0 0 1rem 0; }
-    /* ===============================
-       Navigation
-       =============================== */
-    nav { border-bottom: 1px solid; }
-    [aria-current] { border-bottom: 2px solid; }
-    /* ===============================
-       Buttons
-       =============================== */
-    a.error-button { border: 0.1rem solid; }
-    /* ===============================
-       THEME VARIABLES
-       =============================== */
-    body {
-      background: var(--body-background-color);
-      color: var(--body-text-color);
-    }
-    code {
-      color: var(--code-color);
-      background: var(--code-background-color);
-    }
-    article {
-      background: var(--card-background-color);
-      border-color: var(--card-border-color);
-    }
-    article.down {
-      border-left-color: var(--down-border-left-color) !important;
-      color: var(--down-color-color);
-    }
-    article.down-active {
-      background: var(--down-background-color);
-      border-color: var(--down-border-left-color);
-    }
-    article.degraded {
-      border-left-color: var(--degraded-border-left-color) !important;
-      color: var(--degraded-color-color);
-    }
-    article.up {
-      border-left-color: var(--up-border-left-color) !important;
-      color: var(--up-color-color);
-    }
-    .tag { color: var(--tag-color); }
-    .tag.closed, .tag.up {
-      background: var(--tag-up-background-color) !important;
-    }
-    .tag.open, .tag.down {
-      background: var(--tag-down-background-color) !important;
-    }
-    .tag.degraded {
-      background: var(--tag-degraded-background-color) !important;
-    }
-    .changed + section .data {
-      background: var(--change-background-color);
-    }
-    nav {
-      border-bottom-color: var(--nav-border-bottom-color);
-      background: var(--nav-background-color);
-    }
-    [aria-current] {
-      border-bottom-color: var(--nav-current-border-bottom-color);
-    }
-    a.error-button {
-      border-color: var(--error-button-border-color);
-      background: var(--error-button-background-color);
-      color: var(--error-button-color);
-    }
-    .submit-button {
-      background: var(--submit-button-background-color);
-      color: var(--submit-button-color);
-      border-color: var(--submit-button-border-color);
-    }
-    article .graph {
-      opacity: var(--graph-opacity);
-      filter: var(--graph-filter);
-    }
-    /* =========================================
-       CNB Custom Overrides
-       ========================================= */
+    /* This block will be injected LAST in the HTML head */
     :root {
-      --body-background-color: linear-gradient(180deg, #8b1120 0%, #3a070c 45%, #000000 100%);
-      --body-text-color: #ffffff;
-      --card-background-color: rgba(0, 0, 0, 0.55);
-      --card-border-color: rgba(255, 255, 255, 0.15);
-      --nav-background-color: linear-gradient(90deg, #8b1120, #000000);
-      --nav-border-bottom-color: #ff4d4d;
-      --nav-current-border-bottom-color: #ff4d4d;
-      --up-border-left-color: #2ecc71;
-      --down-border-left-color: #ff4d4d;
-      --degraded-border-left-color: #ffa500;
-      --tag-up-background-color: #2ecc71;
-      --tag-down-background-color: #ff4d4d;
-      --tag-degraded-background-color: #ffa500;
-      --graph-opacity: 1;
+      --body-background-color: linear-gradient(180deg, #8b1120 0%, #3a070c 45%, #000000 100%) !important;
+      --body-text-color: #ffffff !important;
     }
+
+    /* Force the background on the HTML/Body tags directly */
     html, body {
+      background: #000000 !important; /* fallback */
       background: var(--body-background-color) !important;
       color: var(--body-text-color) !important;
     }
-    article { backdrop-filter: blur(2px); }
-    /* TV GRID */
-    .container {
-      max-width: 1900px !important;
-      width: calc(100vw - 80px) !important;
-      margin: 0 auto !important;
-      padding: 0 40px !important;
-      box-sizing: border-box;
-    }
-    article + article { margin-top: 0 !important; }
+
+    /* Force the Grid Layout */
     main section {
       display: grid !important;
-      grid-template-columns: repeat(2, minmax(360px, 1fr)) !important;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)) !important;
       gap: 18px !important;
-      align-items: start !important;
     }
-    main section > *:not(article) { grid-column: 1 / -1 !important; }
-    article { margin: 0 !important; }
-    article.down, article.down-active { grid-column: 1 / -1 !important; }
-    @media (min-width: 1400px) {
-      main section { grid-template-columns: repeat(3, minmax(360px, 1fr)) !important; }
-    }
-    @media (min-width: 1900px) {
-      main section { grid-template-columns: repeat(4, minmax(340px, 1fr)) !important; }
-    }
-    article .graph { max-height: 95px; overflow: hidden; }
