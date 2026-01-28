@@ -58,6 +58,4 @@ status-website:
   navbar:
     - title: Status
       href: /
-    - title: GitHub Repository
-      href: https://github.com/$OWNER/$REPO
 
