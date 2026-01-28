@@ -1,3 +1,7 @@
+/* ===============================
+   Base layout & typography
+   =============================== */
+
 body {
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
@@ -38,12 +42,17 @@ a {
   box-sizing: border-box;
 }
 
+/* ===============================
+   Articles / cards
+   =============================== */
+
 article {
   padding: 1rem 1.25rem;
   position: relative;
   border-radius: 0.2rem;
   border: 1px solid;
 }
+
 article.link a::after {
   content: "";
   position: absolute;
@@ -52,27 +61,32 @@ article.link a::after {
   top: 0;
   bottom: 0;
 }
+
 article + article {
   margin-top: 0.5rem;
 }
+
 article + h3 {
   margin-top: 1rem;
 }
+
 h3 {
   opacity: 0.75;
 }
+
 h4 {
   font-weight: bold;
 }
-article.down {
-  border-left: 0.2rem solid;
-}
-article.degraded {
-  border-left: 0.2rem solid;
-}
+
+article.down,
+article.degraded,
 article.up {
   border-left: 0.2rem solid;
 }
+
+/* ===============================
+   Flex helpers
+   =============================== */
 
 .f {
   display: flex;
@@ -85,6 +99,10 @@ section + h2 {
   margin-top: 2rem;
 }
 
+/* ===============================
+   Tags
+   =============================== */
+
 .tag {
   display: inline-block;
   padding: 0.33rem 0.5rem;
@@ -95,15 +113,25 @@ section + h2 {
   margin-left: 0.5rem;
 }
 
+/* ===============================
+   Definition lists
+   =============================== */
+
 dl {
   margin-bottom: 1.5rem;
 }
+
 dl dt {
   font-weight: bold;
 }
+
 dl dd {
   margin: 0 0 1rem 0;
 }
+
+/* ===============================
+   Navigation
+   =============================== */
 
 nav {
   border-bottom: 1px solid;
@@ -113,17 +141,17 @@ nav {
   border-bottom: 2px solid;
 }
 
+/* ===============================
+   Buttons
+   =============================== */
+
 a.error-button {
   border: 0.1rem solid;
 }
 
-/* Theming */
-
-.submit-button {
-  background: #01a3a4;
-  color: #fff;
-  border-color: transparent;
-}
+/* ===============================
+   THEME VARIABLES (Upptime core)
+   =============================== */
 
 body {
   background: var(--body-background-color);
@@ -144,14 +172,17 @@ article.down {
   border-left-color: var(--down-border-left-color) !important;
   color: var(--down-color-color);
 }
+
 article.down-active {
   background: var(--down-background-color);
   border-color: var(--down-border-left-color);
 }
+
 article.degraded {
   border-left-color: var(--degraded-border-left-color) !important;
   color: var(--degraded-color-color);
 }
+
 article.up {
   border-left-color: var(--up-border-left-color) !important;
   color: var(--up-color-color);
@@ -160,14 +191,17 @@ article.up {
 .tag {
   color: var(--tag-color);
 }
+
 .tag.closed,
 .tag.up {
   background: var(--tag-up-background-color) !important;
 }
+
 .tag.open,
 .tag.down {
   background: var(--tag-down-background-color) !important;
 }
+
 .tag.degraded {
   background: var(--tag-degraded-background-color) !important;
 }
@@ -200,4 +234,105 @@ a.error-button {
 article .graph {
   opacity: var(--graph-opacity);
   filter: var(--graph-filter);
+}
+
+/* =========================================
+   CNB Custom Overrides (RED -> BLACK THEME)
+   ========================================= */
+
+:root {
+  --body-background-color: linear-gradient(180deg, #8b1120 0%, #3a070c 45%, #000000 100%);
+  --body-text-color: #ffffff;
+
+  --card-background-color: rgba(0, 0, 0, 0.55);
+  --card-border-color: rgba(255, 255, 255, 0.15);
+
+  --nav-background-color: linear-gradient(90deg, #8b1120, #000000);
+  --nav-border-bottom-color: #ff4d4d;
+  --nav-current-border-bottom-color: #ff4d4d;
+
+  --up-border-left-color: #2ecc71;
+  --down-border-left-color: #ff4d4d;
+  --degraded-border-left-color: #ffa500;
+
+  --tag-up-background-color: #2ecc71;
+  --tag-down-background-color: #ff4d4d;
+  --tag-degraded-background-color: #ffa500;
+
+  /* optional */
+  --graph-opacity: 1;
+}
+
+/* Make sure gradient actually applies everywhere */
+html,
+body {
+  background: var(--body-background-color) !important;
+  color: var(--body-text-color) !important;
+}
+
+/* Optional: subtle glass effect on cards */
+article {
+  backdrop-filter: blur(2px);
+}
+
+/* ======================================================
+   TV GRID: cards side-by-side (2–4 columns)
+   ====================================================== */
+
+/* Use more screen width */
+.container {
+  max-width: 1900px !important;
+  width: calc(100vw - 80px) !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+  box-sizing: border-box;
+}
+
+/* Remove old vertical stacking margin so grid gap controls spacing */
+article + article {
+  margin-top: 0 !important;
+}
+
+/* Put the card list into a grid */
+main section {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(360px, 1fr)) !important;
+  gap: 18px !important;
+  align-items: start !important;
+}
+
+/* Headings/text span full width inside the grid */
+main section > *:not(article) {
+  grid-column: 1 / -1 !important;
+}
+
+/* Cards: let grid handle spacing */
+article {
+  margin: 0 !important;
+}
+
+/* Incident cards span full width */
+article.down,
+article.down-active {
+  grid-column: 1 / -1 !important;
+}
+
+/* 3 columns on wide screens */
+@media (min-width: 1400px) {
+  main section {
+    grid-template-columns: repeat(3, minmax(360px, 1fr)) !important;
+  }
+}
+
+/* 4 columns on very wide / 4K */
+@media (min-width: 1900px) {
+  main section {
+    grid-template-columns: repeat(4, minmax(340px, 1fr)) !important;
+  }
+}
+
+/* Keep graphs from making cards too tall */
+article .graph {
+  max-height: 95px;
+  overflow: hidden;
 }
