@@ -53,7 +53,7 @@ status-website:
 
   links:
     - rel: stylesheet
-      href: /CNB-Status-Page/assets/global2.css
+      href: /CNB-Status-Page/global2.css
 
   logoUrl: /CNB-Status-Page/assets/images.png
   name: Career Now Brands Status
