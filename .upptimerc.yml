@@ -41,10 +41,5 @@ status-website:
   baseUrl: /CNB-Status-Page
   logoUrl: /CNB-Status-Page/assets/images.png
   name: Career Now Brands Status
-  introTitle: "System Status"
-  introMessage: "Live uptime and incident reporting for Career Now Brands internal and customer-facing systems."
-  navbar:
-    - title: Status
-      href: /
-  # This line forces the browser to load your file AFTER the bot's global.css
+  # Line this up exactly with 'name' (2 spaces)
   customHeader: '<link rel="stylesheet" href="/CNB-Status-Page/custom.css">'
