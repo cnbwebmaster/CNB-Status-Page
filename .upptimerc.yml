@@ -41,29 +41,33 @@ status-website:
   baseUrl: /CNB-Status-Page
   logoUrl: /CNB-Status-Page/assets/images.png
   name: Career Now Brands Status
-  customHeader: |
+customHeader: |
     <style>
-      :root {
+      /* This targets the variables Upptime actually uses for its theme engine */
+      :root, html, [data-theme="dark"], [data-theme="light"] {
         --body-background-color: #000000 !important;
         --body-text-color: #ffffff !important;
+        --card-background-color: rgba(0, 0, 0, 0.55) !important;
+        --accent-color: #8b1120 !important;
       }
-      html, body {
-        background: linear-gradient(180deg, #8b1120 0%, #3a070c 45%, #000000 100%) !important;
+      
+      body {
+        background: linear-gradient(180deg, #8b1120 0%, #3a070c 45%, #000000 100%) fixed !important;
         color: #ffffff !important;
-        min-height: 100vh;
+        min-height: 100vh !important;
       }
-      .container {
-        max-width: 1900px !important;
-        width: calc(100vw - 80px) !important;
-      }
+
+      /* Force the grid layout */
       main section {
         display: grid !important;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)) !important;
         gap: 18px !important;
       }
-      article {
-        background: rgba(0, 0, 0, 0.55) !important;
-        backdrop-filter: blur(2px) !important;
+
+      .container {
+        max-width: 1900px !important;
+        width: calc(100vw - 80px) !important;
       }
+    </style>
     </style>
 
