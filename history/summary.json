@@ -4,19 +4,19 @@
     "url": "https://careernowbrands.com",
     "icon": "https://icons.duckduckgo.com/ip3/careernowbrands.com.ico",
     "slug": "career-now-brands-website",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 307,
-    "timeDay": 294,
+    "status": "up",
+    "uptime": "99.94%",
+    "uptimeDay": "95.75%",
+    "uptimeWeek": "99.39%",
+    "uptimeMonth": "99.86%",
+    "uptimeYear": "99.94%",
+    "time": 306,
+    "timeDay": 270,
     "timeWeek": 219,
-    "timeMonth": 190,
-    "timeYear": 307,
+    "timeMonth": 191,
+    "timeYear": 306,
     "dailyMinutesDown": {
-      "2026-03-30": 0
+      "2026-03-30": 61
     }
   },
   {
