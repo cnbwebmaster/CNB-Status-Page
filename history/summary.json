@@ -118,18 +118,20 @@
     "url": "https://app.hubspot.com",
     "icon": "https://icons.duckduckgo.com/ip3/app.hubspot.com.ico",
     "slug": "hub-spot",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 315,
-    "timeDay": 314,
-    "timeWeek": 348,
-    "timeMonth": 303,
-    "timeYear": 315,
-    "dailyMinutesDown": {}
+    "time": 313,
+    "timeDay": 185,
+    "timeWeek": 311,
+    "timeMonth": 295,
+    "timeYear": 313,
+    "dailyMinutesDown": {
+      "2026-06-06": 0
+    }
   },
   {
     "name": "Slack",
