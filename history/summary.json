@@ -100,19 +100,19 @@
     "url": "https://sso.online.tableau.com/",
     "icon": "https://icons.duckduckgo.com/ip3/sso.online.tableau.com.ico",
     "slug": "tableau-cloud-sso",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.95%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "up",
+    "uptime": "99.97%",
+    "uptimeDay": "95.44%",
+    "uptimeWeek": "99.35%",
+    "uptimeMonth": "99.85%",
+    "uptimeYear": "99.97%",
     "time": 155,
-    "timeDay": 208,
-    "timeWeek": 263,
-    "timeMonth": 175,
+    "timeDay": 159,
+    "timeWeek": 244,
+    "timeMonth": 173,
     "timeYear": 155,
     "dailyMinutesDown": {
-      "2026-06-06": 1
+      "2026-06-06": 66
     }
   },
   {
@@ -140,19 +140,19 @@
     "url": "https://slack.com",
     "icon": "https://icons.duckduckgo.com/ip3/slack.com.ico",
     "slug": "slack",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "up",
+    "uptime": "99.97%",
+    "uptimeDay": "95.47%",
+    "uptimeWeek": "99.35%",
+    "uptimeMonth": "99.85%",
+    "uptimeYear": "99.97%",
     "time": 322,
-    "timeDay": 544,
-    "timeWeek": 457,
-    "timeMonth": 380,
+    "timeDay": 384,
+    "timeWeek": 428,
+    "timeMonth": 375,
     "timeYear": 322,
     "dailyMinutesDown": {
-      "2026-06-06": 0
+      "2026-06-06": 65
     }
   },
   {
