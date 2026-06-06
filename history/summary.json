@@ -100,10 +100,10 @@
     "url": "https://sso.online.tableau.com/",
     "icon": "https://icons.duckduckgo.com/ip3/sso.online.tableau.com.ico",
     "slug": "tableau-cloud-sso",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.95%",
+    "uptimeWeek": "99.99%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 155,
@@ -111,7 +111,9 @@
     "timeWeek": 263,
     "timeMonth": 175,
     "timeYear": 155,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-06-06": 1
+    }
   },
   {
     "name": "HubSpot",
@@ -138,9 +140,9 @@
     "url": "https://slack.com",
     "icon": "https://icons.duckduckgo.com/ip3/slack.com.ico",
     "slug": "slack",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -149,7 +151,9 @@
     "timeWeek": 457,
     "timeMonth": 380,
     "timeYear": 322,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-06-06": 0
+    }
   },
   {
     "name": "Five9",
